@@ -1,5 +1,5 @@
 {
-  "name": "angular-builders",
+  "name": "@ng-builder",
   "version": "0.0.1",
   "description": "Package that contains angular builders for the angular cli to extend and empower your development workflow.",
   "author": "Lukas Holzer <lukas.holzer@typeflow.cc>",

@@ -1,5 +1,5 @@
 export interface BuilderOptions {
-  /** he schema field should point to your GraphQLSchema. */
+  /** The schema field should point to your GraphQLSchema. */
   schema: string | string[];
   /** The documents field should point to your GraphQL documents. */
   documents: string | string[];

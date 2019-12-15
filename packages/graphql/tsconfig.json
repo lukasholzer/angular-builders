@@ -6,7 +6,6 @@
     "moduleResolution": "node",
     "outDir": "./dist",
     "resolveJsonModule": true,
-    "target": "ES2017",
     "types": ["jest", "node"]
   },
   "files": ["./builders.json"],
