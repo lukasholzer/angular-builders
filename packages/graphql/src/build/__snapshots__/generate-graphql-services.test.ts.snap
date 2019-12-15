@@ -1352,7 +1352,8 @@ export type VehiclesEdge = {
       title
     }
   }
-}",
+}
+",
   "/test/models/all-films.generated.ts": "import * as Types from '../../models/types.d';
 
 import gql from 'graphql-tag';
