@@ -24,7 +24,7 @@ beforeEach(() => {
   vol.reset();
 });
 
-test('A allFilms angular service should be generated for the matching query', async () => {
+test('An allFilms angular service should be generated for the matching graphql query', async () => {
   vol.fromJSON({
     '/test/all-films.graphql': getFixture('get-all-films.graphql')
   });

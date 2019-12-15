@@ -4,7 +4,7 @@
     "build": {
       "implementation": "./src/build/build",
       "schema": "./src/build/schema.json",
-      "description": "Build a Node application"
+      "description": "Build the angular services for the provided graphQl queries"
     }
   }
 }
