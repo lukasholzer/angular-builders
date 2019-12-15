@@ -1,11 +1,12 @@
-  
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "declarationDir": "./lib/@types",
-    "outDir": "./lib"
+    "declaration": true,
+    "declarationDir": "./dist/@types",
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "target": "ES2017"
   },
-  "include": [
-    "./src"
-  ]
- }
+  "files": ["./builders.json"],
+  "include": ["./src/**/*.ts", "./src/**/*.json"]
+}

@@ -5,25 +5,28 @@
   "author": "Lukas Holzer <lukas.holzer@dynatrace.com>",
   "homepage": "https://github.com/lukasholzer/angular-builders#readme",
   "license": "MIT",
-  "main": "lib/graphql.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "schematics": "./collection.json",
+  "main": "src/index.js",
   "builders": "./builders.json",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lukasholzer/angular-builders.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "clean": " rm -rf dist coverage",
+    "test": "jest --detectOpenHandles --verbose --forceExit",
+    "build": "yarn clean && tsc"
   },
   "bugs": {
     "url": "https://github.com/lukasholzer/angular-builders/issues"
   },
   "devDependencies": {
     "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "@angular-devkit/architect": "^0.803.20",
+    "@angular-devkit/core": "^8.3.20"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "graphql",
+  "type": "object",
+  "properties": {
+  },
+  "additionalProperties": false,
+  "required": []
+}
