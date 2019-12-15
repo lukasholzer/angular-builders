@@ -9,6 +9,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "builders": "./dist/builders.json",
   "repository": {
     "type": "git",
