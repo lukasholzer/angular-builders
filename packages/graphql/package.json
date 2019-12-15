@@ -1,12 +1,15 @@
 {
   "name": "graphql-builder",
   "version": "0.0.1-alpha.0",
-  "description": "> TODO: description",
+  "description": "Angular Builder for GraphQl Apollo services",
   "author": "Lukas Holzer <lukas.holzer@dynatrace.com>",
   "homepage": "https://github.com/lukasholzer/angular-builders#readme",
   "license": "MIT",
-  "main": "src/index.js",
-  "builders": "./builders.json",
+  "main": "dist/src/index.js",
+  "files": [
+    "dist"
+  ],
+  "builders": "./dist/builders.json",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lukasholzer/angular-builders.git"
