@@ -15,7 +15,7 @@ export async function generateGraphQlServices(
   const files = await graphQlCodeGenerator(options);
 
   const barrelFile = files
-    .map(file => `export * from '${basename(file.filename, '.ts')}';`)
+    .map(file => `export * from './${basename(file.filename, '.ts')}';`)
     .sort()
     .join('\n');
 
