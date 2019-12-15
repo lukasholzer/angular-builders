@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`A allFilms angular service should be generated for the matching query: all-films 1`] = `
+exports[`An allFilms angular service should be generated for the matching graphql query: all-films 1`] = `
 Object {
   "/models/index.ts": "export * from 'all-films.generated';
 export * from 'types.d';",
