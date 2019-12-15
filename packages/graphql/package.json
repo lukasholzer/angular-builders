@@ -1,0 +1,29 @@
+{
+  "name": "graphql",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Lukas Holzer <lukas.holzer@dynatrace.com>",
+  "homepage": "https://github.com/lukasholzer/angular-builders#readme",
+  "license": "MIT",
+  "main": "lib/graphql.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "schematics": "./collection.json",
+  "builders": "./builders.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukasholzer/angular-builders.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/lukasholzer/angular-builders/issues"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}
