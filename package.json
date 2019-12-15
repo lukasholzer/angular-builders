@@ -2,10 +2,29 @@
   "name": "angular-builders",
   "version": "0.0.1",
   "description": "Package that contains angular builders for the angular cli to extend and empower your development workflow.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Lukas Holzer <lukas.holzer@typeflow.cc>",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukasholzer/angular-builders.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lukasholzer/angular-builders/issues",
+    "email": "lukas.holzer@typeflow.cc"
+  },
+  "keywords": [
+    "Angular",
+    "CLI",
+    "Builders",
+    "GraphQL"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bootstrap": "lerna bootstrap",
+    "lint": "lerna exec --parallel yarn lint",
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "lerna": "^3.4.3"
+  }
 }
