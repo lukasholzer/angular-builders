@@ -1,3 +1,3 @@
-import { fs } from "memfs";
+import { fs } from 'memfs';
 
-jest.mock("fs", () => fs);
+jest.mock('fs', () => fs);

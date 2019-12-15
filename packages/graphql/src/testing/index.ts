@@ -1,1 +1,1 @@
-export * from "./get-fixture";
+export * from './get-fixture';

@@ -5,7 +5,5 @@ module.exports = {
   ...base,
   name: pkg.name,
   displayName: `${pkg.name} – v${pkg.version}`,
-  setupFiles: [
-    './src/test-setup.ts'
-  ]
+  setupFiles: ['./src/test-setup.ts']
 };
