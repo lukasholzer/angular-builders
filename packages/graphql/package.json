@@ -1,5 +1,5 @@
 {
-  "name": "graphql",
+  "name": "graphql-builder",
   "version": "0.0.1-alpha.0",
   "description": "> TODO: description",
   "author": "Lukas Holzer <lukas.holzer@dynatrace.com>",
@@ -20,13 +20,26 @@
     "url": "https://github.com/lukasholzer/angular-builders/issues"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.23",
     "jest": "^24.9.0",
+    "memfs": "^3.0.1",
     "ts-jest": "^24.2.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
   },
   "dependencies": {
     "@angular-devkit/architect": "^0.803.20",
-    "@angular-devkit/core": "^8.3.20"
-  }
+    "@angular-devkit/core": "^8.3.20",
+    "@graphql-codegen/cli": "^1.9.1",
+    "@graphql-codegen/fragment-matcher": "^1.9.1",
+    "@graphql-codegen/introspection": "^1.9.1",
+    "@graphql-codegen/near-operation-file-preset": "^1.9.1",
+    "@graphql-codegen/plugin-helpers": "^1.9.1",
+    "@graphql-codegen/typescript": "^1.9.1",
+    "@graphql-codegen/typescript-apollo-angular": "^1.9.1",
+    "@graphql-codegen/typescript-compatibility": "^1.9.1",
+    "@graphql-codegen/typescript-operations": "^1.9.1",
+    "graphql": "^14.5.8"
+  },
+  "gitHead": "2a66b282af915de9cd35421c18f6ca042702f1e0"
 }

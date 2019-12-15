@@ -3,9 +3,11 @@
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "./dist/@types",
+    "moduleResolution": "node",
     "outDir": "./dist",
     "resolveJsonModule": true,
-    "target": "ES2017"
+    "target": "ES2017",
+    "types": ["jest", "node"]
   },
   "files": ["./builders.json"],
   "include": ["./src/**/*.ts", "./src/**/*.json"]

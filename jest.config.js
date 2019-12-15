@@ -1,14 +1,16 @@
 module.exports = {
-  verbose: true,
-  testPathIgnorePatterns: ['lib/', 'node_modules', 'fixtures'],
   transform: {
-    '^.+\\.ts$': 'ts-jest'
+    "^.+\\.ts$": "ts-jest"
   },
-  testRegex: "(/(tests|src)/.*.(test|spec|e2e)).ts$",
-  moduleFileExtensions: ['ts', 'js', 'json', 'node'],
-  collectCoverage: true,
-  projects: [
-    '<rootDir>/packages/*/jest.config.js'
-  ],
-  coverageDirectory: "<rootDir>/coverage/"
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
+    }
+  },
+  coverageReporters: ["json", "lcov", "text", "clover"],
+  verbose: true,
+  testRegex: "(/(tests|src)/.*.(test|spec|e2e)).ts$"
 };

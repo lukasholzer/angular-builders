@@ -4,6 +4,7 @@ import {
   createBuilder
 } from "@angular-devkit/architect";
 import { BuilderOptions } from "./builder-options";
+import { json } from '@angular-devkit/core';
 
 export async function run(
   options: BuilderOptions,
@@ -14,4 +15,4 @@ export async function run(
   };
 }
 
-export default createBuilder<BuilderOptions>(run);
+export default createBuilder<BuilderOptions & json.JsonObject>(run);

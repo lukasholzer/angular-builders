@@ -1,7 +1,11 @@
+const base = require('../../jest.config.base');
 const pkg = require('./package.json');
 
 module.exports = {
+  ...base,
   name: pkg.name,
-  preset: '../../jest.config.js',
   displayName: `${pkg.name} – v${pkg.version}`,
+  setupFiles: [
+    './src/test-setup.ts'
+  ]
 };

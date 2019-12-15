@@ -3,7 +3,50 @@
   "id": "graphql",
   "type": "object",
   "properties": {
+    "schema": {
+      "description": "The schema field should point to your GraphQLSchema. For example http://server1.com/graphql",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "documents": {
+      "description": "The documents field should point to your GraphQL documents.",
+      "default": "**/*.graphql",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "outputPath": {
+      "type": "string",
+      "description": "The path where the files should be generated.",
+      "default": "graphql-models"
+    },
+    "declarationFile": {
+      "type": "string",
+      "description": "The name of the generated declaration file.",
+      "default": "types.d.ts"
+    },
+    "watch": {
+      "description": "Watch files for changes and rerun code generation",
+      "type": "boolean"
+    }
   },
   "additionalProperties": false,
-  "required": []
+  "required": ["schema", "documents"]
 }

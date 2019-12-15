@@ -4,6 +4,10 @@
   "description": "Package that contains angular builders for the angular cli to extend and empower your development workflow.",
   "author": "Lukas Holzer <lukas.holzer@typeflow.cc>",
   "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lukasholzer/angular-builders.git"
@@ -19,8 +23,8 @@
     "GraphQL"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "bootstrap": "lerna bootstrap",
+    "test": "lerna run test",
     "lint": "lerna exec --parallel yarn lint",
     "build": "lerna run build"
   },
