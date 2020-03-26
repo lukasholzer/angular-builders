@@ -26,7 +26,14 @@ export async function generateGraphQlServices(
 async function graphQlCodeGenerator(
   options: BuilderOptions
 ): Promise<GeneratedResult[]> {
-  const { schema, documents, outputPath, declarationFile, watch } = options;
+  const {
+    schema,
+    documents,
+    outputPath,
+    declarationFile,
+    watch,
+    ...additionalConfig
+  } = options;
   const modelsFolder = basename(outputPath);
 
   try {
@@ -36,6 +43,9 @@ async function graphQlCodeGenerator(
       documents,
       generates: {
         [join(outputPath, declarationFile)]: {
+          config: {
+            ...additionalConfig
+          },
           plugins: ['typescript', 'fragment-matcher']
         },
         [join(outputPath)]: {

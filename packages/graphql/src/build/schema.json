@@ -45,8 +45,12 @@
     "watch": {
       "description": "Watch files for changes and rerun code generation",
       "type": "boolean"
+    },
+    "skipTypename": {
+      "description": "Skip __typename in generated models",
+      "type": "boolean"
     }
   },
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required": ["schema", "documents"]
 }

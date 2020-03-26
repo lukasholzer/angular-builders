@@ -9,4 +9,6 @@ export interface BuilderOptions {
   declarationFile: string;
   /** Watch files for changes and rerun code generation */
   watch: boolean;
+  /** Skip __typename in generated models */
+  skipTypename?: boolean;
 }
