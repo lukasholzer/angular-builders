@@ -26,7 +26,8 @@
     "bootstrap": "lerna bootstrap",
     "test": "lerna run test",
     "lint": "lerna exec --parallel yarn lint",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "publish": "lerna publish"
   },
   "devDependencies": {
     "lerna": "^3.4.3"
