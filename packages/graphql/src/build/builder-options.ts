@@ -11,4 +11,10 @@ export interface BuilderOptions {
   watch: boolean;
   /** Skip __typename in generated models */
   skipTypename?: boolean;
+  /** Make sure to generate code that compatible with TypeScript strict mode */
+  strict?: boolean;
+  /** Avoid using Pick and resolve the actual primitive type of all selection set */
+  preResolveTypes?: boolean;
+  /** Generates immutable types by adding readonly to properties and uses ReadonlyArray */
+  immutableTypes?: boolean;
 }
