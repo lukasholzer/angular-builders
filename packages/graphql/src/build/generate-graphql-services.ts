@@ -32,7 +32,7 @@ async function graphQlCodeGenerator(
     outputPath,
     declarationFile,
     watch,
-    ...additionalConfig
+    ...config
   } = options;
   const modelsFolder = basename(outputPath);
 
@@ -43,12 +43,11 @@ async function graphQlCodeGenerator(
       documents,
       generates: {
         [join(outputPath, declarationFile)]: {
-          config: {
-            ...additionalConfig
-          },
+          config,
           plugins: ['typescript', 'fragment-matcher']
         },
         [join(outputPath)]: {
+          config,
           preset: 'near-operation-file',
           presetConfig: {
             baseTypesPath: declarationFile,
