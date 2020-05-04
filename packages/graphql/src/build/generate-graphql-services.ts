@@ -1,5 +1,5 @@
 import { generate } from '@graphql-codegen/cli';
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { join, basename } from 'path';
 import { BuilderOptions } from './builder-options';
 
