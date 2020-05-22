@@ -1,23 +1,15 @@
-  
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-# packages
-node_modules
 
-packages/*/dist
-packages/*/bin
+# compiled output
+/dist
+/tmp
+/out-tsc
 
-# temp dirs
-_tmp
-dist
-dest
-tmp
-out-tsc
-
-# credentials
-.env
+# dependencies
+/node_modules
 
 # IDEs and editors
-.idea
+/.idea
 .project
 .classpath
 .c9/
@@ -33,19 +25,16 @@ out-tsc
 !.vscode/extensions.json
 
 # misc
-.rpt2_cache
-.sass-cache
-connect.lock
-coverage
-
-# debug logs
-lerna-debug.log
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
 npm-debug.log
 yarn-error.log
 testem.log
-libpeerconnection.log
-
+/typings
 
 # System Files
 .DS_Store
 Thumbs.db
+ng-builder-v0.0.0.tgz
