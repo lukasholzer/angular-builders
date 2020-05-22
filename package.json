@@ -1,38 +1,63 @@
 {
   "name": "ng-builder",
-  "version": "0.0.1",
-  "description": "Package that contains angular builders for the angular cli to extend and empower your development workflow.",
-  "author": "Lukas Holzer <lukas.holzer@typeflow.cc>",
+  "version": "0.0.0",
   "license": "MIT",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lukasholzer/angular-builders.git"
-  },
-  "bugs": {
-    "url": "https://github.com/lukasholzer/angular-builders/issues",
-    "email": "lukas.holzer@typeflow.cc"
-  },
-  "keywords": [
-    "Angular",
-    "CLI",
-    "Builders",
-    "GraphQL"
-  ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "test": "lerna run test",
-    "lint": "lerna exec --parallel yarn lint",
-    "build": "lerna run build",
-    "publish": "lerna publish"
+    "nx": "nx",
+    "start": "nx serve",
+    "build": "nx build",
+    "test": "nx test",
+    "lint": "nx workspace-lint && nx lint",
+    "e2e": "nx e2e",
+    "affected:apps": "nx affected:apps",
+    "affected:libs": "nx affected:libs",
+    "affected:build": "nx affected:build",
+    "affected:e2e": "nx affected:e2e",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint",
+    "affected:dep-graph": "nx affected:dep-graph",
+    "affected": "nx affected",
+    "format": "nx format:write",
+    "format:write": "nx format:write",
+    "format:check": "nx format:check",
+    "update": "nx migrate latest",
+    "workspace-schematic": "nx workspace-schematic",
+    "dep-graph": "nx dep-graph",
+    "help": "nx help"
+  },
+  "private": true,
+  "dependencies": {
+    "@graphql-codegen/cli": "^1.16.0",
+    "@graphql-codegen/fragment-matcher": "^1.16.0",
+    "@graphql-codegen/introspection": "^1.16.0",
+    "@graphql-codegen/near-operation-file-preset": "^1.16.0",
+    "@graphql-codegen/plugin-helpers": "^1.16.0",
+    "@graphql-codegen/typescript": "^1.16.0",
+    "@graphql-codegen/typescript-apollo-angular": "^1.16.0",
+    "@graphql-codegen/typescript-compatibility": "^1.16.0",
+    "@graphql-codegen/typescript-operations": "^1.16.0",
+    "graphql": "^14.2.0",
+    "graphql-tag": "^2.10.3"
   },
   "devDependencies": {
-    "lerna": "^3.4.3"
-  },
-  "dependencies": {
-    "prettier": "^1.19.1"
+    "@nrwl/eslint-plugin-nx": "9.5.1",
+    "@nrwl/jest": "^9.5.1",
+    "@nrwl/node": "^9.5.1",
+    "@nrwl/nx-plugin": "^9.5.1",
+    "@nrwl/workspace": "9.5.1",
+    "@types/jest": "25.1.4",
+    "@types/node": "~8.9.4",
+    "@typescript-eslint/eslint-plugin": "2.19.2",
+    "@typescript-eslint/parser": "2.19.2",
+    "dotenv": "6.2.0",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.0.0",
+    "jest": "25.2.3",
+    "memfs": "^3.2.0",
+    "prettier": "2.0.4",
+    "ts-jest": "25.2.1",
+    "ts-node": "~7.0.0",
+    "tslint": "~6.0.0",
+    "typescript": "~3.8.3"
   }
 }

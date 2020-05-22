@@ -1,16 +1,17 @@
 module.exports = {
+  testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
   transform: {
-    "^.+\\.ts$": "ts-jest"
+    '^.+\\.(ts|js|html)$': 'ts-jest',
   },
-  coverageThreshold: {
-    global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
-    }
-  },
-  coverageReporters: ["json", "lcov", "text", "clover"],
-  verbose: true,
-  testRegex: "(/(tests|src)/.*.(test|spec|e2e)).ts$"
+  collectCoverage: true,
+  // coverageThreshold: {
+  //   global: {
+  //     branches: 80,
+  //     functions: 80,
+  //     lines: 80,
+  //     statements: 80,
+  //   },
+  // },
+  resolver: '@nrwl/jest/plugins/resolver',
+  moduleFileExtensions: ['ts', 'js', 'html'],
 };

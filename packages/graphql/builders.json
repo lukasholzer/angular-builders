@@ -1,10 +1,10 @@
 {
-  "$schema": "@angular-devkit/architect/src/builders-schema.json",
+  "$schema": "../../node_modules/@angular-devkit/architect/src/builders-schema.json",
   "builders": {
     "build": {
-      "implementation": "./src/build/build",
-      "schema": "./src/build/schema.json",
-      "description": "Build the angular services for the provided graphQl queries"
+      "implementation": "./src/builders/build/builder",
+      "schema": "./src/builders/build/schema.json",
+      "description": "build builder"
     }
   }
 }

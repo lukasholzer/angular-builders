@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "graphql",
+  "title": "Graphql builder",
+  "description": "",
   "type": "object",
   "properties": {
     "schema": {

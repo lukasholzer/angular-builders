@@ -1,4 +1,6 @@
-export interface BuilderOptions {
+import { JsonObject } from '@angular-devkit/core';
+
+export interface BuildBuilderSchema extends JsonObject {
   /** The schema field should point to your GraphQLSchema. */
   schema: string | string[];
   /** The documents field should point to your GraphQL documents. */

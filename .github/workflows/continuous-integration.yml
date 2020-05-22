@@ -7,7 +7,11 @@ jobs:
     name: Installing dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+      - run: git fetch --no-tags --prune --depth=5 origin master
       - name: Cache node modules
         uses: actions/cache@v1
         with:
@@ -23,8 +27,13 @@ jobs:
         env:
           CI: true
 
+      - name: Lint
+        run: |
+          yarn nx workspace-lint
+          yarn affected:libs --base=origin/master
+
       - name: Build
-        run: yarn build
+        run: yarn affected:build --base=origin/master
 
       - name: Test
-        run: yarn test
+        run: yarn affected:test --base=origin/master

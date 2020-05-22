@@ -1,13 +1,13 @@
 import { vol } from 'memfs';
-import { getFixture } from '../testing';
-import { BuilderOptions } from './builder-options';
+import { getFixture } from '../../testing';
+import { BuildBuilderSchema } from './schema';
 import { generateGraphQlServices } from './generate-graphql-services';
 
 const TEST_ENDPOINT =
   'https://swapi-graphql.netlify.com/.netlify/functions/index';
 
 async function runGeneration(
-  config: Partial<BuilderOptions> = {}
+  config: Partial<BuildBuilderSchema> = {}
 ): Promise<void> {
   return generateGraphQlServices({
     schema: TEST_ENDPOINT,
@@ -24,7 +24,7 @@ beforeEach(() => {
   vol.reset();
 });
 
-test('An allFilms angular service should be generated for the matching graphql query', async () => {
+it('An allFilms angular service should be generated for the matching graphql query', async () => {
   vol.fromJSON({
     '/test/all-films.graphql': getFixture('get-all-films.graphql')
   });

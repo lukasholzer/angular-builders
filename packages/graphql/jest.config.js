@@ -1,9 +1,9 @@
-const base = require('../../jest.config.base');
-const pkg = require('./package.json');
-
 module.exports = {
-  ...base,
-  name: pkg.name,
-  displayName: `${pkg.name} – v${pkg.version}`,
-  setupFiles: ['./src/test-setup.ts']
+  name: 'graphql',
+  preset: '../../jest.config.js',
+  transform: {
+    '^.+\\.[tj]sx?$': 'ts-jest',
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'html'],
+  coverageDirectory: '../../coverage/packages/graphql',
 };
