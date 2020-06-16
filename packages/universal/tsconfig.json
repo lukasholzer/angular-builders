@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist/@types",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "types": ["jest", "node"]
+  },
+  "files": ["./builders.json"],
+  "include": ["./src/**/*.ts", "./src/**/*.json"]
+}

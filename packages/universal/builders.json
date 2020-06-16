@@ -1,0 +1,10 @@
+{
+  "$schema": "@angular-devkit/architect/src/builders-schema.json",
+  "builders": {
+    "static-pages": {
+      "implementation": "./src/static-pages/build",
+      "schema": "./src/static-pages/schema.json",
+      "description": "Generate static pages out of an universal application"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "static-pages",
+  "title": "Angular Universal static pages generator",
+  "type": "object",
+  "properties": {
+    "outputPath": {
+      "type": "string",
+      "default": "static-pages",
+      "description": "The output path of the generated files."
+    },
+    "browserTarget": {
+      "type": "string",
+      "description": "Target to build.",
+      "pattern": "^[^:\\s]+:[^:\\s]+(:[^\\s]+)?$"
+    },
+    "serverTarget": {
+      "type": "string",
+      "description": "Server target to use for rendering the app.",
+      "pattern": "^[^:\\s]+:[^:\\s]+(:[^\\s]+)?$"
+    },
+    "routesFile": {
+      "type": "string",
+      "description": "Path to the file that holds the route information."
+    },
+    "routes": {
+      "type": "array",
+      "description": "List of routes",
+      "items": {
+        "minItems": 1,
+        "type": "string",
+        "uniqueItems": true
+      },
+      "default": ["/"]
+    }
+  },
+  "additionalProperties": true,
+  "required": ["browserTarget", "serverTarget"]
+}

@@ -1,8 +1,8 @@
 {
-  "name": "@ng-builder/graphql",
+  "name": "@ng-builder/universal",
   "version": "0.1.1",
-  "description": "Angular Builder for GraphQl Apollo services",
-  "author": "Lukas Holzer <lukas.holzer@dynatrace.com>",
+  "description": "Angular Builders for Universal rendering",
+  "author": "Lukas Holzer <lukas.holzer@typeflow.cc>",
   "homepage": "https://github.com/lukasholzer/angular-builders#readme",
   "license": "MIT",
   "main": "dist/src/index.js",
@@ -27,25 +27,19 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
+    "express": "^4.17.1",
     "jest": "^24.9.0",
     "memfs": "^3.0.1",
     "ts-jest": "^24.2.0",
     "ts-node": "^8.5.4",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "unionfs": "^4.4.0"
   },
   "dependencies": {
     "@angular-devkit/architect": "^0.803.20",
     "@angular-devkit/core": "^8.3.20",
-    "@graphql-codegen/cli": "^1.9.1",
-    "@graphql-codegen/fragment-matcher": "^1.9.1",
-    "@graphql-codegen/introspection": "^1.9.1",
-    "@graphql-codegen/near-operation-file-preset": "^1.9.1",
-    "@graphql-codegen/plugin-helpers": "^1.9.1",
-    "@graphql-codegen/typescript": "^1.9.1",
-    "@graphql-codegen/typescript-apollo-angular": "^1.9.1",
-    "@graphql-codegen/typescript-compatibility": "^1.9.1",
-    "@graphql-codegen/typescript-operations": "^1.9.1",
-    "graphql": "^14.5.8"
-  },
-  "gitHead": "312f112b8adf9f5cfb42122b5ec5404c1a3f2788"
+    "axios": "^0.19.2",
+    "chalk": "^4.1.0",
+    "rxjs": "^6.5.5"
+  }
 }
