@@ -14,6 +14,9 @@
     "type": "git",
     "url": "git+https://github.com/lukasholzer/angular-builders.git"
   },
+  "engines": {
+    "node": ">=12.10"
+  },
   "dependencies": {
     "@graphql-codegen/cli": "^1.9.1",
     "@graphql-codegen/fragment-matcher": "^1.9.1",
