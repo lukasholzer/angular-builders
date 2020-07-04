@@ -50,6 +50,11 @@
     "skipTypename": {
       "description": "Skip __typename in generated models",
       "type": "boolean"
+    },
+    "provideServices": {
+      "description": "Provide the generated services in root",
+      "type": "boolean",
+      "default": true
     }
   },
   "additionalProperties": true,
