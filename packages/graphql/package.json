@@ -1,6 +1,6 @@
 {
   "name": "@ng-builder/graphql",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Angular Builder for GraphQl Apollo services",
   "author": "Lukas Holzer <lukas.holzer@dynatrace.com>",
   "homepage": "https://github.com/lukasholzer/angular-builders#readme",
