@@ -31,7 +31,7 @@ export function removeRootProvider(files: GeneratedResult[]) {
         const decorator = getTsClassDecoratorByName(statement, 'Injectable');
 
         if (decorator && isCallExpression(decorator.expression)) {
-          decorator.expression.arguments = undefined;
+          (decorator.expression as any).arguments = undefined;
         }
       }
     }

@@ -8,24 +8,28 @@
       "schematics": {},
       "architect": {
         "lint": {
-          "builder": "@nrwl/linter:lint",
+          "builder": "@nrwl/linter:eslint",
           "options": {
-            "linter": "eslint",
-            "tsConfig": [
-              "packages/graphql/tsconfig.lib.json",
-              "packages/graphql/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!packages/graphql/**/*"]
+            "lintFilePatterns": [
+              "packages/graphql/**/*.ts",
+              "packages/graphql/src/test-setup.ts",
+              "packages/graphql/**/*.spec.ts",
+              "packages/graphql/**/*.spec.tsx",
+              "packages/graphql/**/*.spec.js",
+              "packages/graphql/**/*.spec.jsx",
+              "packages/graphql/**/*.d.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "packages/graphql/jest.config.js",
-            "tsConfig": "packages/graphql/tsconfig.spec.json",
-            "setupFile": "packages/graphql/src/test-setup.ts",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/packages/graphql"
+          ]
         },
         "build": {
           "builder": "@nrwl/node:package",
@@ -46,8 +50,12 @@
                 "glob": "builders.json",
                 "output": "."
               }
-            ]
-          }
+            ],
+            "srcRootForCompilationRoot": "packages/graphql"
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         }
       }
     }

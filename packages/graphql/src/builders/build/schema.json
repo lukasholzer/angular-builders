@@ -58,5 +58,8 @@
     }
   },
   "additionalProperties": true,
-  "required": ["schema", "documents"]
+  "required": [
+    "schema",
+    "documents"
+  ]
 }
