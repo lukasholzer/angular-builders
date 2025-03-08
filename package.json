@@ -46,7 +46,7 @@
     "@nrwl/node": "11.2.12",
     "@nrwl/nx-plugin": "11.2.12",
     "@nrwl/tao": "11.2.12",
-    "@nrwl/workspace": "11.2.12",
+    "@nrwl/workspace": "19.8.4",
     "@types/jest": "26.0.8",
     "@types/node": "12.12.38",
     "@typescript-eslint/eslint-plugin": "4.3.0",
